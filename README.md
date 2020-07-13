@@ -1,10 +1,17 @@
-# Rebecca-Nayere
-This is a web portfolio about me
+# {PORTFOLIO}
+
+#### {This is a website of Rebecca Nayere Portfolio'
+10/07/2020}
+
 
 # author
 ```sh
-Rebecca Nayere
+{By Rebecca Nayere}
+
 ```
+#### Description
+{Portfolio is a website of Rebecca Nayere Resume. This includes the background education and work experience hobbies, contacts,skills}
+
 ## Setup instructions
 
 Clone the repo locally:
@@ -15,9 +22,19 @@ cd Rebecca Nayere
 ```
 usage
 
-```sh
-The page is using tailwind.css to run all styles from a cdn in the head tag
-```
+## Technologies Used
 
+```sh
+{The page is using tailwind.css to run all styles from a cdn in the head tag
+```
+HTML,CSS}
+
+##Support and contact details
+
+{Email :rebecca.nayere@gmail.com}
+
+### Licence
+
+@ Copywright 2020 Rebecca Nayere
 
 
