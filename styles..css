@@ -229,6 +229,8 @@ img {
 .project-title {
   font-size: 2rem;
   padding: 2rem 0.5rem;
+  font-size: 26px;
+  padding-bottom: 1em;
 }
 
 .btn {
