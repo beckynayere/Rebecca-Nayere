@@ -1,166 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
-    <!-- this is tailwind cdn import -->
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-    <!-- all my styles are inline thats why i commented out the style.css file -->
-<!--    <link rel="stylesheet" type="text/css" href="style.css">-->
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Merienda+One&display=swap" rel="stylesheet">
+  <!-- this is tailwind cdn import -->
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <!-- all my styles are inline thats why i commented out the style.css file -->
+  <!--    <link rel="stylesheet" type="text/css" href="style.css">-->
 
 
-    <title>Rebecca Portfolio</title>
+  <title>Rebecca Portfolio</title>
 </head>
-<body class="absolute h-screen text-white" >
 
-<!-- START NAV -->
+<body class="absolute h-screen text-white">
 
-<header class="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
-    <div class="flex items-center justify-between px-4 py-3 sm:p-0" >
+  <!-- START NAV -->
+
+  <header class="bg-gray-900 sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
+    <div class="flex items-center justify-between px-4 py-3 sm:p-0">
       <div>
         <img class="h-32 w-32 object-cover" src="becky.jpg" alt="Nayere">
       </div>
       <div class="sm:hidden">
-        <button @click="isOpen = !isOpen" type="button" class="block text-gray-500 hover:text-white focus:text-white focus:outline-none">
+        <button @click="isOpen = !isOpen" type="button"
+          class="block text-gray-500 hover:text-white focus:text-white focus:outline-none">
           <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-            <path v-if="isOpen" fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"/>
-            <path v-if="!isOpen" fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+            <path v-if="isOpen" fill-rule="evenodd"
+              d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z" />
+            <path v-if="!isOpen" fill-rule="evenodd"
+              d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
           </svg>
         </button>
       </div>
     </div>
     <nav :class="isOpen ? 'block' : 'hidden'" class="px-2 pt-2 pb-4 sm:flex sm:p-0">
       <a href="#about" class="block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800">About</a>
-      <a href="#resume" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Resume</a>
-<!--      <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Messages</a>-->
+      <a href="#resume"
+        class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Resume</a>
+      <!--      <a href="#" class="mt-1 block px-2 py-1 text-white font-semibold rounded hover:bg-gray-800 sm:mt-0 sm:ml-2">Messages</a>-->
     </nav>
   </header>
 
-<!-- END NAV -->
+  <!-- END NAV -->
 
-<!-- START WELCOME SECTION -->
+  <!-- START WELCOME SECTION -->
 
-<section id="about" class="flex-col p-4 h-auto bg-gray-900 border">
+  <section id="about" class="flex-col p-4 h-auto bg-gray-900 border">
     <div class=" m-auto flex-col p-5">
-  <h1 class="uppercase m-auto "><strong> Hey I´m <span class="text-orange-500">    Rebecca Nayere </span></strong></h1>
-  <p > I am Rebecca Nayere and so passionate about helping the needy kids. With that I was able to form an 
-    NGO called Nayers Foundation. This focuses on helping the needy children by taking care of their basic 
-    needs like we provide them with the essentials needed at school and also some basic needed at home.
-</p>
-        </div>
-        <div class="m-auto flex-col">
-            <h2 class="m-auto">A list of repos from github</h2>
-            <ol class="m-auto text-yellow-800"> 
-                <li><a href="https://github.com/beckynayere/NAYERS-ORGANISATION">
-                    NAYERS-ORGANISATION
-                    <p class="p-3 pt-0 text-white">Its a website based on NGO's foundation and projects.
-                        It was built with HTML , CSS
-                      </p>
-                </a></li>
-                <li><a href="https://github.com/beckynayere/JKUAT-prototype">
-                    JKUAT-prototype
-                    <p class="p-3 pt-0 text-white">A link that links JKUAT Main campus to JKUAT CBD. It was built with HTML</p>
-                </a></li>
-            </ol>
-        </div>
+      <h1 class="uppercase m-auto "><strong> Hey I´m <span class="text-orange-500"> Rebecca Nayere </span></strong></h1>
+      <p> I am Rebecca Nayere and so passionate about helping the needy kids. With that I was able to form an
+        NGO called Nayers Foundation. This focuses on helping the needy children by taking care of their basic
+        needs like we provide them with the essentials needed at school and also some basic needed at home.
+      </p>
+    </div>
+    <div class="m-auto flex-col">
+      <h2 class="m-auto">A list of repos from github</h2>
+      <ol class="m-auto text-yellow-800">
+        <li><a href="https://github.com/beckynayere/NAYERS-ORGANISATION">
+            NAYERS-ORGANISATION
+            <p class="p-3 pt-0 text-white">Its a website based on NGO's foundation and projects.
+              It was built with HTML , CSS
+            </p>
+          </a></li>
+        <li><a href="https://github.com/beckynayere/JKUAT-prototype">
+            JKUAT-prototype
+            <p class="p-3 pt-0 text-white">A link that links JKUAT Main campus to JKUAT CBD. It was built with HTML</p>
+          </a></li>
+      </ol>
+    </div>
 
-</section>
+  </section>
 
-<!-- END WELCOME SECTION -->
+  <!-- END WELCOME SECTION -->
 
-<!-- START PROJECTS SECTION -->
-<section id="resume" class="flex-col h-auto bg-gray-900 border">
-  <div class="flex-col flex-wrap p-5">
-    <div>
-    <h1> <strong>Education</strong>  </h1>
-        <ol class="p-5 pt-0" type= "1" >
-            <li>Bachelor of Science(Industrial Chemistry Management) </li>
+  <!-- START PROJECTS SECTION -->
+  <section id="resume" class="flex-col h-auto bg-gray-900 border">
+    <div class="flex-col flex-wrap p-5">
+      <div>
+        <h1> <strong>Education</strong> </h1>
+        <ol class="p-5 pt-0" type="1">
+          <li>Bachelor of Science(Industrial Chemistry Management) </li>
 
-               <li> Kenyatta University</li>
+          <li> Kenyatta University</li>
 
-               <li>
-                  2010 – 2013 Kenya Certificate of Secondary Education
-            </li>           
+          <li>
+            2010 – 2013 Kenya Certificate of Secondary Education
+          </li>
 
-            <li  class="pb-5"> Sosiot Girls High School Grade attained: A- (minus) 
-            </li>
+          <li class="pb-5"> Sosiot Girls High School Grade attained: A- (minus)
+          </li>
         </ol>
 
 
-  </div>
-  <div>
-      
-    <h1><strong>Experience - Internship</strong>
-</h1>
-    <h1>2019 – Dec 2019 Daproim Africa Ltd</h1>
-    <h2>Areas covered: </h2>
-      
-      <ul class="p-5 pt-0">
-        <li>Transcription</li>
-        <li>Data entry and record management</li>
-        <li>Front end development</li>
-        <li>Web development; including creating of web applications responsive to various platforms e.g. android and IOS.</li>
-        <li>Identification/troubleshooting and implementation of solutions to user requests</li>
-        <li>Participated as a team member in the planning, designing and implementation of IT projects for identified needs
+      </div>
+      <div>
+
+        <h1><strong>Experience - Internship</strong>
+        </h1>
+        <h1>2019 – Dec 2019 Daproim Africa Ltd</h1>
+        <h2>Areas covered: </h2>
+
+        <ul class="p-5 pt-0">
+          <li>Transcription</li>
+          <li>Data entry and record management</li>
+          <li>Front end development</li>
+          <li>Web development; including creating of web applications responsive to various platforms e.g. android and
+            IOS.</li>
+          <li>Identification/troubleshooting and implementation of solutions to user requests</li>
+          <li>Participated as a team member in the planning, designing and implementation of IT projects for identified
+            needs
           </li>
-          </ul>
-  </div>
+        </ul>
+      </div>
     </div>
     <div class="flex-col flex-wrap p-3">
-  <div>
-    <h1>
-      <strong>Experience – Attachment</strong>
-    </h1>
+      <div>
+        <h1>
+          <strong>Experience – Attachment</strong>
+        </h1>
 
-    <h1>May 2018 – Aug 2018 Law Society of Kenya</h1>
-    <h2>Areas covered:</h2>
-    <ul class="p-5 pt-0">
-      <li> Data entry</li>
-      <li>Record keeping</li>
-      </ul>
-      <h1>State House Girls high school</h1>
-<h2> <em>Areas covered</em> </h2>
-<ul class="p-5 pt-0">
-  <li>Teaching Mathematics and Chemistry</li>
-  <li>Library Services Roles</li>
-</ul>
-<h1> 2016 - Aug 2016 Digital Opportunity Trust Kenya</h1>
-<h2><em>Areas covered</em></h2>
-<ul class="p-5 pt-0">
- <li>Data entry</li> 
- <li>Data management</li>
-<li class="pb-4">Customer care</li>
-    </ul>
+        <h1>May 2018 – Aug 2018 Law Society of Kenya</h1>
+        <h2>Areas covered:</h2>
+        <ul class="p-5 pt-0">
+          <li> Data entry</li>
+          <li>Record keeping</li>
+        </ul>
+        <h1>State House Girls high school</h1>
+        <h2> <em>Areas covered</em> </h2>
+        <ul class="p-5 pt-0">
+          <li>Teaching Mathematics and Chemistry</li>
+          <li>Library Services Roles</li>
+        </ul>
+        <h1> 2016 - Aug 2016 Digital Opportunity Trust Kenya</h1>
+        <h2><em>Areas covered</em></h2>
+        <ul class="p-5 pt-0">
+          <li>Data entry</li>
+          <li>Data management</li>
+          <li class="pb-4">Customer care</li>
+        </ul>
+      </div>
+
+      <div>
+        <h1>
+          <strong>Hobbies/Skills/Interests </strong>
+        </h1>
+        <ul class="p-5 pt-0">
+          <li> Dancing</li>
+          <li> Singing</li>
+        </ul>
+        <p class="p-5">
+          <strong> <span class="text-orange-800"> Why I chose Moringa </span> </strong>
+          <em>I chose Moringa because I've always wanted and admired to be part of the Moringa Community
+            and I do believe that this is where it will help me learn grow and nature my coding skills in
+            the path of being a software developer.</em>
+        </p>
+      </div>
     </div>
+  </section>
 
-  <div>
-    <h1>
-     <strong>Hobbies/Skills/Interests </strong> 
-    </h1>
-    <ul class="p-5 pt-0">
-<li> Dancing</li>
-<li> Singing</li>
-</ul>
-<p class="p-5">
-   <strong> <span class="text-orange-800"> Why I chose Moringa </span> </strong>
-  <em>I chose Moringa because I've always wanted and admired to be part of the Moringa Community 
-    and I do believe that this is where it will help me learn grow and nature my coding skills in 
-    the path of being a software developer.</em>
-   </p>
-  </div>
-  </div>
-</section>
-
-<section class="flex h-32 bg-gray-900 border border">
-<p class="m-auto">
-    &copy; Created by
-    <em>Rebecca Nayere</em>
-  </p>
-</section>
+  <section class="flex h-32 bg-gray-900 border border">
+    <p class="m-auto">
+      &copy; Created by
+      <em>Rebecca Nayere</em>
+    </p>
+  </section>
 
 
-<!-- END FOOTER SECTION -->
+  <!-- END FOOTER SECTION -->
 </body>
+
 </html>
 
 <!--
